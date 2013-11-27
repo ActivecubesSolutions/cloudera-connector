@@ -1,0 +1,6 @@
+C:\Users\mojotech\Projects\Code\DotNet\MojoMySQLConsole\work\MojoMySQLConsole.exe.config
+C:\Users\mojotech\Projects\Code\DotNet\MojoMySQLConsole\work\MojoMySQLConsole.exe
+C:\Users\mojotech\Projects\Code\DotNet\MojoMySQLConsole\work\MojoMySQLConsole.pdb
+C:\Users\mojotech\Projects\Code\DotNet\MojoMySQLConsole\obj\Debug\MojoMySQLConsole.exe
+C:\Users\mojotech\Projects\Code\DotNet\MojoMySQLConsole\obj\Debug\MojoMySQLConsole.pdb
+C:\Users\mojotech\Projects\Code\DotNet\MojoMySQLConsole\obj\Debug\MojoMySQLConsole.csprojResolveAssemblyReference.cache

@@ -1,0 +1,10 @@
+C:\Users\mojotech\Projects\DotNet\MojoNamedPipes\bin\Debug\MojoNamedPipes.exe.config
+C:\Users\mojotech\Projects\DotNet\MojoNamedPipes\bin\Debug\MojoNamedPipes.exe
+C:\Users\mojotech\Projects\DotNet\MojoNamedPipes\bin\Debug\MojoNamedPipes.pdb
+C:\Users\mojotech\Projects\DotNet\MojoNamedPipes\obj\Debug\MojoNamedPipes.exe
+C:\Users\mojotech\Projects\DotNet\MojoNamedPipes\obj\Debug\MojoNamedPipes.pdb
+C:\Users\mojotech\Projects\Code\DotNet\MojoNamedPipes\bin\Debug\MojoNamedPipes.exe.config
+C:\Users\mojotech\Projects\Code\DotNet\MojoNamedPipes\obj\Debug\MojoNamedPipes.exe
+C:\Users\mojotech\Projects\Code\DotNet\MojoNamedPipes\obj\Debug\MojoNamedPipes.pdb
+C:\Users\mojotech\Projects\Code\DotNet\MojoNamedPipes\bin\Debug\MojoNamedPipes.exe
+C:\Users\mojotech\Projects\Code\DotNet\MojoNamedPipes\bin\Debug\MojoNamedPipes.pdb

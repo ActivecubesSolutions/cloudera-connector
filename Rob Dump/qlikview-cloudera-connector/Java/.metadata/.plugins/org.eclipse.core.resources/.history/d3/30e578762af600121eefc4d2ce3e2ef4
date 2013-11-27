@@ -1,0 +1,62 @@
+package mojohive;
+
+import java.sql.SQLException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.DriverManager;
+
+import mojohive.MojoHiveDriver;
+
+
+
+public class MojoHiveMain {
+	
+	private static String driverName = "org.apache.hadoop.hive.jdbc.HiveDriver";
+	private static String url = "jdbc:hive://54.218.97.70:10000/default";
+	private static String user = "";
+	private static string password = "";
+
+	public static void main(String[] args) throws SQLException {
+		
+		//MojoHiveDriver hive_driver = new MojoHiveDriver();
+		
+		
+
+		
+		// TODO Auto-generated method stub
+		System.out.println("Hello World from mojohive.MojoHiveMain");
+
+		try {
+		      Class.forName(driverName);
+		    } catch (ClassNotFoundException e) {
+		      // TODO Auto-generated catch block
+		      e.printStackTrace();
+		      System.exit(1);
+		    }
+		
+		try {
+		    Connection con = DriverManager.getConnection(url, user, password);
+		    Statement stmt = con.createStatement();
+
+		    String sql;
+		    String tableName = "Store";
+		    ResultSet res;
+		    
+		    // regular hive query
+		    sql = "select count(1) from " + tableName;
+		    System.out.println("Running: " + sql);
+		    res = stmt.executeQuery(sql);
+		    while (res.next()) {
+		      System.out.println(res.getString(1));
+		    }
+		
+		}
+		catch (Exception e) {
+		      // TODO Auto-generated catch block
+		      e.printStackTrace();
+		      System.exit(1);
+		    }
+	}
+
+}

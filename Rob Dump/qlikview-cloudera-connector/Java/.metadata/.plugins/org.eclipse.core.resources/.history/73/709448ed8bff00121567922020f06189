@@ -1,0 +1,109 @@
+package mojohive;
+
+import java.sql.SQLException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.DriverManager;
+
+import java.text.DateFormat;
+import java.util.Calendar;
+
+import mojohive.MojoHiveDriver;
+
+
+
+public class MojoHiveMain {
+	
+	private static String driverName = "org.apache.hadoop.hive.jdbc.HiveDriver";
+
+	//private static String url = "jdbc:hive://54.218.97.70:10000/default";
+	//private static String url = "jdbc:hive://54.218.97.70:21050/default";
+	//private static String url = "jdbc:hive://localhost:10000/default";
+	//private static String url = "jdbc:hive://54.218.97.70:10000/default";
+	//private static String url = "jdbc:hive2://myhost.example.com:21050/;auth=noSasl";
+	private static String url = "jdbc:hive://54.218.97.70:21050/;auth=HS2NoSasl";
+
+	//private static String url = "jdbc:hive2://54.218.97.70:21050/default;auth=HS2NoSasl";
+	
+	//private static String url = "jdbc:hive://54.218.97.70:21050/;auth=HS2NoSasl";
+	//private static String url = "jdbc:hive2://54.218.97.70:21050/default;auth=HS2NoSasl";
+	//private static String url = "jdbc:hive://54.218.97.70:21050/;auth=HS2NoSasl";
+	//private static String url = "jdbc:hive://54.218.97.70:21050/";
+	
+	// Connection refused:
+	//private static String url = "jdbc:hive://54.218.97.70:21050/default";
+	//private static String url = "jdbc:hive://54.218.97.70:21050/default;auth=HS2NoSasl";
+	//private static String url = "jdbc:hive://54.218.97.70:21050/default;auth=noSasl";
+	//private static String url = "jdbc:hive://54.218.97.70:21050/;auth=noSasl";
+	//private static String url = "jdbc:hive://54.218.97.70:21050/;auth=HS2NoSasl";
+	
+	// Invalid URL error (the 'hive2' appears to cause the problem):
+	//private static String url = "jdbc:hive2://54.218.97.70:21050/;auth=HS2NoSasl";
+	//private static String url = "jdbc:hive2://54.218.97.70:21050/default;auth=noSasl";
+	//private static String url = "jdbc:hive2://54.218.97.70:21050/;auth=noSasl";
+	//private static String url = "jdbc:hive2://54.218.97.70:10000/default";
+	
+	// Timeout error:
+	
+	
+	private static String user = "";
+	private static String password = "";
+
+	public static void MojoLogMsg(String msg){
+		Calendar cal = Calendar.getInstance();
+	    DateFormat df = DateFormat.getDateTimeInstance(DateFormat.SHORT,
+	        DateFormat.LONG);
+	    System.out.println(df.format(cal.getTime()) + ": " + msg);
+	}
+	
+	public static void main(String[] args) throws SQLException {
+		
+		//MojoHiveDriver hive_driver = new MojoHiveDriver();
+		
+		
+
+		
+		// TODO Auto-generated method stub
+		MojoLogMsg("Hello World from mojohive.MojoHiveMain");
+		
+
+		try {
+				MojoLogMsg("Loading driver: " + driverName);
+		      Class.forName(driverName);
+		    } catch (ClassNotFoundException e) {
+		      // TODO Auto-generated catch block
+		      e.printStackTrace();
+		      System.exit(1);
+		    }
+		
+		try {
+			MojoLogMsg("Opening connection to: " + url);
+		    Connection con = DriverManager.getConnection(url, user, password);
+		    MojoLogMsg("Connection successful. " );
+		    
+		    MojoLogMsg("Creating statement. " );
+		    Statement stmt = con.createStatement();
+
+		    String sql;
+		    String tableName = "Store";
+		    ResultSet res;
+		    
+		    // regular hive query
+		   // sql = "select count(1) from " + tableName;
+		   // MojoLogMsg("Running SQL: " + sql);
+		   // res = stmt.executeQuery(sql);
+		   // while (res.next()) {
+		   //   System.out.println(res.getString(1));
+		   // }
+		
+		}
+		catch (Exception e) {
+		      // TODO Auto-generated catch block
+			  MojoLogMsg("Fatal exception follows!");
+		      e.printStackTrace();
+		      System.exit(1);
+		    }
+	}
+
+}

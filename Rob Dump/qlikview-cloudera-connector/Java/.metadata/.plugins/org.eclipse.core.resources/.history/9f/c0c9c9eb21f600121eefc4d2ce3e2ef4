@@ -1,0 +1,20 @@
+package mojohive;
+
+import mojohive.MojoHiveDriver;
+
+
+
+public class MojoHiveMain {
+
+	public static void main(String[] args) {
+		
+		MojoHiveDriver hive_driver = new MojoHiveDriver();
+		
+		
+
+		
+		// TODO Auto-generated method stub
+		System.out.println("Hello World from mojohive.MojoHiveMain");
+	}
+
+}
