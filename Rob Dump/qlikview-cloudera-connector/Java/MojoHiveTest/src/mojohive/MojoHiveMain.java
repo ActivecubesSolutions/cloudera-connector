@@ -97,7 +97,7 @@ public class MojoHiveMain {
 		// Call the actual query function.
 		//int sampleSize[]={10,1000,50000,100000,500000,1000000};
 		//int sampleSize[]={10,500000,1000000};
-		int sampleSize[]={10};
+		int sampleSize[]={50};
 		for(int i=0;i<sampleSize.length;i++){
 			String sql_query = "select * from priceandinventory limit "+sampleSize[i];
 			String xml_result = null;
