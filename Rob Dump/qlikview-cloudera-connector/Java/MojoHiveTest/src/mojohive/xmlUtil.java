@@ -1,8 +1,11 @@
 package mojohive;
 
 import java.io.StringWriter;
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -72,5 +75,18 @@ public class xmlUtil {
 			System.out.println(StackTraceUtil.getStackTrace(e));
 		}
 		return sw.toString();
+	}
+
+	public static void runInitializationQueries(Connection con, Statement stmt) throws SQLException {
+		 String[] args= new String[2];
+         args[0]="add jar /home/cm/connector/UDF.jar"; 
+         args[1]="CREATE TEMPORARY FUNCTION collect_all AS 'javaclient.CollectAll'";
+         //args[2]="set hive.exec.reducers.bytes.per.reducer=100000";
+         
+         for (String query:args)
+         {
+             stmt.execute(query);
+         }
+
 	}
 }

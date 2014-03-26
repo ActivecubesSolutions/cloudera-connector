@@ -38,7 +38,7 @@ public class MojoHiveMain {
 	// private static String url =
 	// "jdbc:hive2://54.218.97.70:21050/;auth=noSasl";
 	//private static String url = "jdbc:hive2://54.251.109.167:10000/default;";
-	 private static String url = "jdbc:hive2://192.168.1.249:10000/default;";
+	 private static String url = "jdbc:hive2://54.251.109.167:10000/default;";
 
 	// private static String url = "jdbc:hive://54.218.97.70:10000/default";
 	// private static String url = "jdbc:hive://54.218.97.70:21050/default";

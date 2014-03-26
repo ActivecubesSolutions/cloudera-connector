@@ -249,7 +249,13 @@ public class MojoHiveDriver implements IMojoHiveDriver {
 				// Run query
 				//logUtil.LogMsg("Creating statement. " );
 				Statement stmt = con.createStatement();			    
-
+				stmt.setFetchSize(2);
+				stmt.execute("set hive.fetch.output.serde = org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe");
+				logUtil.LogMsg("Running SQL (query): " + query);
+				
+				//String addfile="add file/home/bluestar/connector/bsilconn.py"
+				
+				xmlUtil.runInitializationQueries(con,stmt);
 				logUtil.LogMsg("Key1: Running SQL (query): " + query);
 				ResultSet  res = stmt.executeQuery(query);
 				//logUtil.LogMsg("Key1: Ending SQL (query): " + query);

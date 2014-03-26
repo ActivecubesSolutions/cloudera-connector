@@ -2,28 +2,34 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/commons-beanutils-1.7.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/commons-digester-1.8.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/commons-lang-2.3.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/commons-logging-1.0.4.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/dom4j-1.6.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/ezmorph-1.0.6.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/freemarker-2.3.8.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/hadoop-core-0.20.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/hive-jdbc-0.10.0-cdh4.2.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/hive-metastore-0.10.0-cdh4.2.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/hive-service-0.10.0-cdh4.2.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/json-lib-2.2.2-jdk15.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/libfb303-0.9.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/libthrift-0.9.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/log4j-1.2.16.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/ognl-2.6.11.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/slf4j-api-1.6.4.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/slf4j-log4j12-1.6.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/xml-apis-2.0.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/xwork-2.0.5.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/commons-collections-3.2.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/gson-2.2.4.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/libs/commons-dbutils-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/MojoHiveDriver.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/MojoHiveDriver2.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/GetHashMapImproved.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/Test.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/ezmorph-1.0.6.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/commons-beanutils-1.7.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/MohoHiveDriver.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/MohoHiveDriver-classForname.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/MohoHiveDriver-Driver-Connection.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/MohoHiveDriver2.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/hive-service-0.10.0-cdh4.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/hive-jdbc-0.10.0-cdh4.4.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/hive-jdbc-0.10.0-cdh4.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/hive-beeline-0.10.0-cdh4.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/hive-jdbc-0.8.1.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/mysql-connector-java-5.1.0-bin.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/slf4j-api-1.6.4.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/libthrift-0.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/libfb303.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/hive-service-0.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/hive-metastore-0.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/hive-jdbc-0.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/commons-dbutils-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/gson-2.2.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

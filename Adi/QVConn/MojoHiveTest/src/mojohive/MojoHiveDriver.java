@@ -3,22 +3,18 @@ package mojohive;
 import java.io.FileOutputStream;
 import java.io.RandomAccessFile;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.MapListHandler;
-
-import net.sf.json.JSONObject;
-import mojohive.StackTraceUtil;
 
 public class MojoHiveDriver implements IMojoHiveDriver {
 

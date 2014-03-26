@@ -250,7 +250,7 @@ public class xmlUtil {
 	    
 	         //TODO Get the queries from a .hiverc file
 	         String[] args= new String[2];
-	         args[0]="add jar /home/bluestar/connector/UDF.jar"; 
+	         args[0]="add jar /home/cm/connector/UDF.jar"; 
 	         args[1]="CREATE TEMPORARY FUNCTION collect_all AS 'javaclient.CollectAll'";
 	         //args[2]="set hive.exec.reducers.bytes.per.reducer=100000";
 	         

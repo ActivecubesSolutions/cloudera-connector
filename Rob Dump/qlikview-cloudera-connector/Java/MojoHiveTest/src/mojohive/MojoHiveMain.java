@@ -99,7 +99,18 @@ public class MojoHiveMain {
 		//int sampleSize[]={10,500000,1000000};
 		int sampleSize[]={50};
 		for(int i=0;i<sampleSize.length;i++){
-			String sql_query = "select * from priceandinventory limit "+sampleSize[i];
+			//String sql_query = "select * from priceandinventory limit "+sampleSize[i];
+			String sql_query ="from (select * from priceandinventory limit 10)"
+					+ "a select collect_all(a.priceandinventoryprimaryid) as priceandinventoryprimaryid,"
+					+ "	collect_all(a.productprimaryid) as productprimaryid,"
+					+ "collect_all(a.storeprimaryid) as storeprimaryid,"
+					+ "collect_all(a.promotionoffersprimaryid) as promotionoffersprimaryid,"
+					+ "collect_all(a.sellingprice) as sellingprice,"
+					+ "collect_all(a.discount) as discount,"
+					+ "collect_all(a.stockavailable) as stockavailable,"
+					+ "collect_all(a.quantityavailable) as quantityavailable,"
+					+ "collect_all(a.pricematch) as pricematch,"
+					+ "collect_all(a.entrydate) as entrydate";
 			String xml_result = null;
 			logUtil.LogMsg("Running SQL (query): " + sql_query);
 			logUtil.LogMsg("Start");
