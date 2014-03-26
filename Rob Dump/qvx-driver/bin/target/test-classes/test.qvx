@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<QvxTableHeader xmlns="http://qlickview.com/schemas/qvx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <MajorVersion>1</MajorVersion>
+    <MinorVersion>0</MinorVersion>
+    <CreateUtcTime>2011-03-15 16:18:01</CreateUtcTime>
+    <TableName>CurrencyExchangeRate</TableName>
+    <UsesSeparatorByte>true</UsesSeparatorByte>
+    <BlockSize>0</BlockSize>
+    <Fields>
+        <QvxFieldHeader>
+            <FieldName>LocalCurrency</FieldName>
+            <Type>QVX_QV_DUAL</Type>
+            <Extent>QVX_QV_SPECIAL</Extent>
+            <NullRepresentation>QVX_NULL_NEVER</NullRepresentation>
+            <CodePage>65001</CodePage>
+            <ByteWidth>0</ByteWidth>
+            <FixPointDecimals>0</FixPointDecimals>
+            <FieldFormat>
+                <Type>UNKNOWN</Type>
+                <nDec>0</nDec>
+                <UseThou>0</UseThou>
+                <Fmt></Fmt>
+                <Dec></Dec>
+                <Thou></Thou>
+            </FieldFormat>
+            <BigEndian>false</BigEndian>
+        </QvxFieldHeader>
+        <QvxFieldHeader>
+            <FieldName>Exchange Rate</FieldName>
+            <Type>QVX_QV_DUAL</Type>
+            <Extent>QVX_QV_SPECIAL</Extent>
+            <NullRepresentation>QVX_NULL_NEVER</NullRepresentation>
+            <CodePage>65001</CodePage>
+            <ByteWidth>0</ByteWidth>
+            <FixPointDecimals>0</FixPointDecimals>
+            <FieldFormat>
+                <Type>UNKNOWN</Type>
+                <nDec>0</nDec>
+                <UseThou>0</UseThou>
+                <Fmt></Fmt>
+                <Dec></Dec>
+                <Thou></Thou>
+            </FieldFormat>
+            <BigEndian>false</BigEndian>
+        </QvxFieldHeader>
+    </Fields>
+</QvxTableHeader>

@@ -1,0 +1,40 @@
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\obj\Debug\QvBigDataConn.csprojResolveAssemblyReference.cache
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\obj\Debug\CustomSQL.baml
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\obj\Debug\Login.baml
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\obj\Debug\CustomSQL.g.cs
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\obj\Debug\Login.g.cs
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\obj\Debug\QvBigDataConn_MarkupCompile.cache
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\obj\Debug\QvBigDataConn.g.resources
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\obj\Debug\QvBigDataConn.Form1.resources
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\obj\Debug\QvBigDataConn.Properties.Resources.resources
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\obj\Debug\QvBigDataConn.QvCustomDialog.resources
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\obj\Debug\QvBigDataConn.Standalone.resources
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\obj\Debug\QvBigDataConn.csproj.GenerateResource.Cache
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\work\QvBigDataConn.exe.config
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\work\QvBigDataConn.exe
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\work\QvBigDataConn.pdb
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\work\IKVM.OpenJDK.Core.dll
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\work\IKVM.Runtime.dll
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\work\jni4net.n-0.8.6.0.dll
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\work\log4net.dll
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\work\MohoHiveDriver.j4n.dll
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\work\QvxLibrary.dll
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\obj\Debug\QvBigDataConn.exe
+C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\obj\Debug\QvBigDataConn.pdb
+C:\workspace\cloudera-connector\QvBigDataConn\work\QvBigDataConn.exe.config
+C:\workspace\cloudera-connector\QvBigDataConn\obj\Debug\QvBigDataConn.exe
+C:\workspace\cloudera-connector\QvBigDataConn\obj\Debug\QvBigDataConn.pdb
+C:\workspace\cloudera-connector\QvBigDataConn\work\QvBigDataConn.exe
+C:\workspace\cloudera-connector\QvBigDataConn\work\QvBigDataConn.pdb
+C:\workspace\cloudera-connector\QvBigDataConn\obj\Debug\QvBigDataConn.csprojResolveAssemblyReference.cache
+C:\workspace\cloudera-connector\QvBigDataConn\obj\Debug\CustomSQL.baml
+C:\workspace\cloudera-connector\QvBigDataConn\obj\Debug\Login.baml
+C:\workspace\cloudera-connector\QvBigDataConn\obj\Debug\CustomSQL.g.cs
+C:\workspace\cloudera-connector\QvBigDataConn\obj\Debug\Login.g.cs
+C:\workspace\cloudera-connector\QvBigDataConn\obj\Debug\QvBigDataConn_MarkupCompile.cache
+C:\workspace\cloudera-connector\QvBigDataConn\obj\Debug\QvBigDataConn.g.resources
+C:\workspace\cloudera-connector\QvBigDataConn\obj\Debug\QvBigDataConn.Form1.resources
+C:\workspace\cloudera-connector\QvBigDataConn\obj\Debug\QvBigDataConn.Properties.Resources.resources
+C:\workspace\cloudera-connector\QvBigDataConn\obj\Debug\QvBigDataConn.QvCustomDialog.resources
+C:\workspace\cloudera-connector\QvBigDataConn\obj\Debug\QvBigDataConn.Standalone.resources
+C:\workspace\cloudera-connector\QvBigDataConn\obj\Debug\QvBigDataConn.csproj.GenerateResource.Cache

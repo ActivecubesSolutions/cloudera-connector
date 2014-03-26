@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jni4net-proxygen xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://jni4net.sf.net/0.8.6.0/toolConfig.xsd">
+  <TargetDirJvm>C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\work\jvm</TargetDirJvm>
+  <TargetDirClr>C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\work\clr</TargetDirClr>
+  <ClassPath Path="C:\Shobha\Projects\Hadoob\SecondTime\cloudera-connector-master\cloudera-connector-master\Rob Dump\qlikview-cloudera-connector\DotNet\QvBigDataConn\work" Generate="true" />
+</jni4net-proxygen>

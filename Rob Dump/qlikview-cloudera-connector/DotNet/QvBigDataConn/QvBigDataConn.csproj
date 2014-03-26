@@ -101,22 +101,32 @@
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="hive-sharp-lib">
+      <HintPath>packages\Hive.Sharp.Lib.1.0\lib\hive-sharp-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core">
+      <HintPath>..\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime">
+      <HintPath>..\IKVM.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="jni4net.n-0.8.6.0, Version=0.8.6.0, Culture=neutral, PublicKeyToken=134a23405600bab4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>work\jni4net.n-0.8.6.0.dll</HintPath>
+      <HintPath>..\jni4net-0.8.6.0-bin\lib\jni4net.n-0.8.6.0.dll</HintPath>
     </Reference>
     <Reference Include="log4net">
-      <HintPath>..\..\..\Toolkits\log4net\4.0\release\log4net.dll</HintPath>
+      <HintPath>..\log4net-1.2.13\bin\net\4.0\release\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="MojoHiveDriver.j4n, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>work\MojoHiveDriver.j4n.dll</HintPath>
+    <Reference Include="MohoHiveDriver.j4n">
+      <HintPath>..\MohoHiveDriver.j4n.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>packages\NLog.2.0.1.2\lib\net40\NLog.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="QvxLibrary, Version=2.0.211.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>.\QvxLibrary.dll</HintPath>
+    <Reference Include="QvxLibrary">
+      <HintPath>..\..\..\..\..\qvsvnlogconnector\QvxLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -130,6 +140,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Thrift">
+      <HintPath>packages\Hive.Sharp.Lib.1.0\lib\Thrift.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +198,7 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -211,9 +225,18 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="tools\licence.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tools\verpatch.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>:: Run verpatch.exe on the file to be copied to the install location
+    <PostBuildEvent>$(TargetDir)\tools\verpatch.exe $(TargetPath) /s "Qlikview Connector" "QvxEventLog"
+:: Run verpatch.exe on the file to be copied to the install location
 "$(ProjectDir)verpatch.exe" "$(TargetPath)" /s "QlikView Connector" "Qv Big Data Connector"
 
 xcopy /Y /R "$(TargetPath)" "C:\Program Files\Common Files\QlikTech\Custom Data\QvBigDataConn\"

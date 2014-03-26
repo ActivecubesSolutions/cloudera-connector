@@ -1,0 +1,91 @@
+3/21/14 3:48:19 PM IST: Hello World from mojohive.MojoHiveMain
+3/21/14 3:48:19 PM IST: Inside Java Land:TestConnection:org.apache.hive.jdbc.HiveDriver
+3/21/14 3:48:19 PM IST: Loading driver: org.apache.hive.jdbc.HiveDriver
+3/21/14 3:48:19 PM IST: Opening connection to: jdbc:hive2://54.251.109.167:10000/default
+log4j:WARN No appenders could be found for logger (org.apache.thrift.transport.TSaslTransport).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+3/21/14 3:48:20 PM IST: Connection successful. 
+3/21/14 3:48:20 PM IST: Connection closed. 
+3/21/14 3:48:20 PM IST: TestConnection() successful.
+3/21/14 3:48:20 PM IST: Running SQL (query): select sellingprice from priceandinventory limit 10
+3/21/14 3:48:20 PM IST: Start
+3/21/14 3:48:20 PM IST: Key1: Running SQL (query): select sellingprice from priceandinventory limit 10
+3/21/14 3:48:44 PM IST: Key1: Ending SQL (query): select sellingprice from priceandinventory limit 10
+3/21/14 3:48:44 PM IST: Key2: Starting JSON convertion
+3/21/14 3:48:44 PM IST: Key2: Ending JSON convertion
+3/21/14 3:48:44 PM IST: End of Execution
+3/21/14 3:48:44 PM IST: Query Execution done
+3/21/14 3:48:44 PM IST: Running SQL (query): select sellingprice from priceandinventory limit 500000
+3/21/14 3:48:44 PM IST: Start
+3/21/14 3:48:44 PM IST: Key1: Running SQL (query): select sellingprice from priceandinventory limit 500000
+3/21/14 3:49:16 PM IST: Key1: Ending SQL (query): select sellingprice from priceandinventory limit 500000
+3/21/14 3:49:16 PM IST: Key2: Starting JSON convertion
+3/21/14 4:02:35 PM IST: Key2: Ending JSON convertion
+3/21/14 4:02:35 PM IST: End of Execution
+3/21/14 4:02:35 PM IST: Query Execution done
+3/21/14 4:02:35 PM IST: Running SQL (query): select sellingprice from priceandinventory limit 1000000
+3/21/14 4:02:35 PM IST: Start
+3/21/14 4:02:35 PM IST: Key1: Running SQL (query): select sellingprice from priceandinventory limit 1000000
+3/21/14 4:03:10 PM IST: Key1: Ending SQL (query): select sellingprice from priceandinventory limit 1000000
+3/21/14 4:03:10 PM IST: Key2: Starting JSON convertion
+org.apache.thrift.transport.TTransportException: java.net.SocketTimeoutException: Read timed out
+	at org.apache.thrift.transport.TIOStreamTransport.read(TIOStreamTransport.java:129)
+	at org.apache.thrift.transport.TTransport.readAll(TTransport.java:84)
+	at org.apache.thrift.transport.TSaslTransport.readLength(TSaslTransport.java:346)
+	at org.apache.thrift.transport.TSaslTransport.readFrame(TSaslTransport.java:423)
+	at org.apache.thrift.transport.TSaslTransport.read(TSaslTransport.java:405)
+	at org.apache.thrift.transport.TSaslClientTransport.read(TSaslClientTransport.java:37)
+	at org.apache.thrift.transport.TTransport.readAll(TTransport.java:84)
+	at org.apache.thrift.protocol.TBinaryProtocol.readAll(TBinaryProtocol.java:378)
+	at org.apache.thrift.protocol.TBinaryProtocol.readI32(TBinaryProtocol.java:297)
+	at org.apache.thrift.protocol.TBinaryProtocol.readMessageBegin(TBinaryProtocol.java:204)
+	at org.apache.thrift.TServiceClient.receiveBase(TServiceClient.java:69)
+	at org.apache.hive.service.cli.thrift.TCLIService$Client.recv_FetchResults(TCLIService.java:505)
+	at org.apache.hive.service.cli.thrift.TCLIService$Client.FetchResults(TCLIService.java:492)
+	at org.apache.hive.jdbc.HiveQueryResultSet.next(HiveQueryResultSet.java:244)
+	at mojohive.MojoHiveDriver.getHashMap(MojoHiveDriver.java:282)
+	at mojohive.MojoHiveDriver.QueryResultSetAsXML(MojoHiveDriver.java:261)
+	at mojohive.MojoHiveMain.main(MojoHiveMain.java:105)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.fill(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at org.apache.thrift.transport.TIOStreamTransport.read(TIOStreamTransport.java:127)
+	... 16 more
+3/21/14 4:08:23 PM IST: End of Execution
+3/21/14 4:08:23 PM IST: QueryResultSetAsXML() failed: Error retrieving next row
+3/21/14 4:08:23 PM IST: Stack trace: java.sql.SQLException: Error retrieving next row
+	at org.apache.hive.jdbc.HiveQueryResultSet.next(HiveQueryResultSet.java:266)
+	at mojohive.MojoHiveDriver.getHashMap(MojoHiveDriver.java:282)
+	at mojohive.MojoHiveDriver.QueryResultSetAsXML(MojoHiveDriver.java:261)
+	at mojohive.MojoHiveMain.main(MojoHiveMain.java:105)
+Caused by: org.apache.thrift.transport.TTransportException: java.net.SocketTimeoutException: Read timed out
+	at org.apache.thrift.transport.TIOStreamTransport.read(TIOStreamTransport.java:129)
+	at org.apache.thrift.transport.TTransport.readAll(TTransport.java:84)
+	at org.apache.thrift.transport.TSaslTransport.readLength(TSaslTransport.java:346)
+	at org.apache.thrift.transport.TSaslTransport.readFrame(TSaslTransport.java:423)
+	at org.apache.thrift.transport.TSaslTransport.read(TSaslTransport.java:405)
+	at org.apache.thrift.transport.TSaslClientTransport.read(TSaslClientTransport.java:37)
+	at org.apache.thrift.transport.TTransport.readAll(TTransport.java:84)
+	at org.apache.thrift.protocol.TBinaryProtocol.readAll(TBinaryProtocol.java:378)
+	at org.apache.thrift.protocol.TBinaryProtocol.readI32(TBinaryProtocol.java:297)
+	at org.apache.thrift.protocol.TBinaryProtocol.readMessageBegin(TBinaryProtocol.java:204)
+	at org.apache.thrift.TServiceClient.receiveBase(TServiceClient.java:69)
+	at org.apache.hive.service.cli.thrift.TCLIService$Client.recv_FetchResults(TCLIService.java:505)
+	at org.apache.hive.service.cli.thrift.TCLIService$Client.FetchResults(TCLIService.java:492)
+	at org.apache.hive.jdbc.HiveQueryResultSet.next(HiveQueryResultSet.java:244)
+	... 3 more
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.io.BufferedInputStream.fill(Unknown Source)
+	at java.io.BufferedInputStream.read1(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at org.apache.thrift.transport.TIOStreamTransport.read(TIOStreamTransport.java:127)
+	... 16 more
+

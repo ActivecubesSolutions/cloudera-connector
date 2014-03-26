@@ -2,7 +2,6 @@ package mojopipes;
 
 import java.io.File;
 import java.io.RandomAccessFile;
-import java.io.IOException;
 
 public class MojoPipeClient {
 
@@ -11,7 +10,7 @@ public class MojoPipeClient {
 		
 		try { 
 			// Connect to the pipe 
-			String pipe_name = "\\\\.\\pipe\\mojotestpipe";
+			String pipe_name = "mojotestpipe";
 			RandomAccessFile pipe = new RandomAccessFile(pipe_name, "rw"); 
 			
 			

@@ -1,0 +1,8 @@
+C:\Users\mojotech\Projects\QvBigDataConn\bin\Debug\QvBigDataConn.exe
+C:\Users\mojotech\Projects\QvBigDataConn\bin\Debug\QvBigDataConn.pdb
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x86\Debug\QvBigDataConn.Properties.Resources.resources
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x86\Debug\QvBigDataConn.exe
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x86\Debug\QvBigDataConn.pdb

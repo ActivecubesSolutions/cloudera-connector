@@ -4,3 +4,12 @@ C:\Users\mojotech\Projects\Code\DotNet\MojoMySQLConsole\work\MojoMySQLConsole.pd
 C:\Users\mojotech\Projects\Code\DotNet\MojoMySQLConsole\obj\Debug\MojoMySQLConsole.exe
 C:\Users\mojotech\Projects\Code\DotNet\MojoMySQLConsole\obj\Debug\MojoMySQLConsole.pdb
 C:\Users\mojotech\Projects\Code\DotNet\MojoMySQLConsole\obj\Debug\MojoMySQLConsole.csprojResolveAssemblyReference.cache
+C:\workspace\cloudera-connector\Rob Dump\qlikview-cloudera-connector\DotNet\MojoMySQLConsole\obj\Debug\MojoMySQLConsole.csprojResolveAssemblyReference.cache
+C:\workspace\cloudera-connector\Rob Dump\qlikview-cloudera-connector\DotNet\MojoMySQLConsole\work\MojoMySQLConsole.exe
+C:\workspace\cloudera-connector\Rob Dump\qlikview-cloudera-connector\DotNet\MojoMySQLConsole\work\MojoMySQLConsole.pdb
+C:\workspace\cloudera-connector\Rob Dump\qlikview-cloudera-connector\DotNet\MojoMySQLConsole\work\IKVM.OpenJDK.Core.dll
+C:\workspace\cloudera-connector\Rob Dump\qlikview-cloudera-connector\DotNet\MojoMySQLConsole\work\IKVM.Runtime.dll
+C:\workspace\cloudera-connector\Rob Dump\qlikview-cloudera-connector\DotNet\MojoMySQLConsole\work\jni4net.n-0.8.6.0.dll
+C:\workspace\cloudera-connector\Rob Dump\qlikview-cloudera-connector\DotNet\MojoMySQLConsole\work\MojoMySQLTest.j4n.dll
+C:\workspace\cloudera-connector\Rob Dump\qlikview-cloudera-connector\DotNet\MojoMySQLConsole\obj\Debug\MojoMySQLConsole.exe
+C:\workspace\cloudera-connector\Rob Dump\qlikview-cloudera-connector\DotNet\MojoMySQLConsole\obj\Debug\MojoMySQLConsole.pdb

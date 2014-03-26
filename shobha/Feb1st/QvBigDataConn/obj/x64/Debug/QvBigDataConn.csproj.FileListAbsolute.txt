@@ -1,0 +1,14 @@
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x64\Debug\ResolveAssemblyReference.cache
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x64\Debug\QvBigDataConn.Properties.Resources.resources
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x64\Debug\GenerateResource.read.1.tlog
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x64\Debug\GenerateResource.write.1.tlog
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x64\Debug\Login.baml
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x64\Debug\Login.g.cs
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x64\Debug\QvBigDataConn_MarkupCompile.cache
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x64\Debug\QvBigDataConn.g.resources
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x64\Debug\QvBigDataConn.Standalone.resources
+C:\Users\mojotech\Projects\QvBigDataConn\bin\x64\Debug\QvBigDataConn.exe
+C:\Users\mojotech\Projects\QvBigDataConn\bin\x64\Debug\QvBigDataConn.pdb
+C:\Users\mojotech\Projects\QvBigDataConn\bin\x64\Debug\QvxLibrary.dll
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x64\Debug\QvBigDataConn.exe
+C:\Users\mojotech\Projects\QvBigDataConn\obj\x64\Debug\QvBigDataConn.pdb
