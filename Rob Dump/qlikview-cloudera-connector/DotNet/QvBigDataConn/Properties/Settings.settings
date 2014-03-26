@@ -11,13 +11,6 @@
     <Setting Name="Queue" Type="System.String" Scope="User">
       <Value Profile="(Default)">Default</Value>
     </Setting>
-    <Setting Name="Drivers" Type="System.Collections.Specialized.StringCollection" Scope="Application">
-      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;string&gt;org.apache.hive.jdbc.HiveDriver&lt;/string&gt;
-  &lt;string&gt;org.apache.hadoop.hive.jdbc.HiveDriver&lt;/string&gt;
-&lt;/ArrayOfString&gt;</Value>
-    </Setting>
     <Setting Name="Auth" Type="System.String" Scope="User">
       <Value Profile="(Default)">auth=noSasl</Value>
     </Setting>
@@ -53,6 +46,13 @@
     </Setting>
     <Setting Name="SimulateConnection" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Drivers" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;org.apache.hive.jdbc.HiveDriver&lt;/string&gt;
+  &lt;string&gt;org.apache.hadoop.hive.jdbc.HiveDriver&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
     </Setting>
     <Setting Name="DriverLocations" Type="System.Collections.Specialized.StringCollection" Scope="Application">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;

@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
-	<classpathentry kind="lib" path="C:/Users/mojotech/Projects/Toolkits/impala-jdbc-0.5-2/commons-logging-1.0.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/mojotech/Projects/Toolkits/impala-jdbc-0.5-2/hive-jdbc-0.10.0-cdh4.2.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/mojotech/Projects/Toolkits/impala-jdbc-0.5-2/hive-metastore-0.10.0-cdh4.2.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/mojotech/Projects/Toolkits/impala-jdbc-0.5-2/hive-service-0.10.0-cdh4.2.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/mojotech/Projects/Toolkits/impala-jdbc-0.5-2/libfb303-0.9.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/mojotech/Projects/Toolkits/impala-jdbc-0.5-2/libthrift-0.9.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/mojotech/Projects/Toolkits/impala-jdbc-0.5-2/log4j-1.2.16.jar"/>
-	<classpathentry kind="lib" path="C:/Users/mojotech/Projects/Toolkits/impala-jdbc-0.5-2/slf4j-api-1.6.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/mojotech/Projects/Toolkits/impala-jdbc-0.5-2/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/workspace/ZCore/lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/hive-jdbc-0.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/hive-metastore-0.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/hive-service-0.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/libfb303.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/libthrift-0.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/slf4j-api-1.6.4.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/hive-jdbc-0.10.0-cdh4.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/hive-service-0.10.0-cdh4.4.0.jar"/>
+	<classpathentry kind="lib" path="/ZCore/lib/json/json-lib-2.2.2-jdk15.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/ezmorph-1.0.6.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/commons-beanutils-1.7.0.jar"/>
+	<classpathentry kind="lib" path="/ZCore/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/software/jars/jOOQ-3.3.1/jOOQ-lib/jooq-3.3.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
