@@ -31,7 +31,7 @@ public class HiveJdbcClient {
        
         Statement stmt = con.createStatement();
            // select * query
-        String sql = "select * from priceandinventory limit 10" ;
+        String sql = "select * from priceandinventory limit 1000" ;
         System.out.println("Running: " + sql);
        final ResultSet res = stmt.executeQuery(sql);
       System.out.println( res.getNString(""));
@@ -43,7 +43,7 @@ public class HiveJdbcClient {
        
     public void run()
     {try {
-        res.setFetchSize(5);
+        res.setFetchSize(10);
         res.next();
     } catch (SQLException e) {
         // TODO Auto-generated catch block
@@ -66,7 +66,7 @@ int times = 0;
     {
     String output = res.getCursorName();
    
-    System.out.println("output"+output);
+   // System.out.println("output"+output);
     //times++;
     if(output.equalsIgnoreCase("false"))
     {

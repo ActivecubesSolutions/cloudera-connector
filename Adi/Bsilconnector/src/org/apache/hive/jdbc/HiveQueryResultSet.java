@@ -314,7 +314,7 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
             }
         }.start();
 
-        final ExecutorService executorService = Executors.newFixedThreadPool(2);
+        final ExecutorService executorService = Executors.newFixedThreadPool(100);
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -331,12 +331,15 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
                     }
 
                     List<List<TRow>> initialList = new ArrayList<List<TRow>>();
-                    System.out.println(Thread.currentThread().getName());
+                    //System.out.println(Thread.currentThread().getName());
                     StringBuilder finalrow = new StringBuilder(100);
-                    fetchedDeque.drainTo(initialList);
-                    for (int x = 0; x <= initialList.size(); x++) {
-                        fetchedRowsItr = initialList.get(i).iterator();
-                        System.out.println(fetchedRowsItr.toString());
+                    try {
+						fetchedRowsItr= fetchedDeque.take().iterator();
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+                   
                         rowcsv = "";
                         finalrow.append("[");
                         while (fetchedRowsItr.hasNext()) {
@@ -432,7 +435,7 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
                             // TODO Auto-generated catch block
                             e.printStackTrace();
                         }
-                    }
+                    
 
                 }
             });
