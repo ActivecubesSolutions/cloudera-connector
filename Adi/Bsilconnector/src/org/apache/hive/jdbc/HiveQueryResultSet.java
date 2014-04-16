@@ -330,7 +330,7 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
         	System.out.println("Current fetchedDeque size is :"+fetchedDeque.size());
             executorService.execute(new Runnable() {
                 public void run() {
-                    if (fetchedDeque.remainingCapacity() == 20) {
+                    if (fetchedDeque.remainingCapacity() == HiveJdbcClient.FETCHED_QUEUE_SIZE*2) {
                         executorService.shutdown();
                     }
 

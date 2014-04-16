@@ -9,9 +9,9 @@ import java.util.Date;
  
 public class HiveJdbcClient {
      public static final int EXECUTOR_CONSUMER_THREADS = 10;
-     public static final int RECORDS_FETCH_LIMIT=100;
-     public static final int RECORDS_FETCH_SIZE=10; //this has to be a constant,as the total number of records is not known. 
-     public static final int FETCHED_QUEUE_SIZE=10;
+     public static final int RECORDS_FETCH_LIMIT=1000;
+     public static final int RECORDS_FETCH_BATCH_SIZE=10; //this has to be a constant,as the total number of records is not known. 
+     public static final int FETCHED_QUEUE_SIZE=100; //Should be a constant. 
 	private static String driverName = "org.apache.hive.jdbc.HiveDriver";
  
   /**
@@ -47,7 +47,7 @@ public class HiveJdbcClient {
        
     public void run()
     {try {
-        res.setFetchSize(RECORDS_FETCH_SIZE);
+        res.setFetchSize(RECORDS_FETCH_BATCH_SIZE);
         res.next();
     } catch (SQLException e) {
         // TODO Auto-generated catch block
@@ -96,8 +96,15 @@ int times = 0;
       }*/
       long lEndTime = new Date().getTime();
       double difference = lEndTime - lStartTime;
-      System.out.println("Elapsed milliseconds: " + difference/1000);
-     
+      System.out.println("**************SUMMARY**************");
+      System.out.println("EXECUTOR_CONSUMER_THREADS\t\t: " + EXECUTOR_CONSUMER_THREADS);
+      System.out.println("RECORDS_FETCH_LIMIT\t\t\t: " + RECORDS_FETCH_LIMIT);
+      System.out.println("(CONSTANT)RECORDS_FETCH_BATCH_SIZE\t: " + RECORDS_FETCH_BATCH_SIZE);
+      System.out.println("(CONSTANT)FETCHED_QUEUE_SIZE\t\t: " + FETCHED_QUEUE_SIZE);
+      System.out.println("MAX QUE SIZE\t\t\t\t: " + (RECORDS_FETCH_LIMIT/RECORDS_FETCH_BATCH_SIZE)/FETCHED_QUEUE_SIZE);
+      System.out.println("Elapsed milliseconds\t\t\t: " + difference/1000);
+      System.out.println("***********************************");
+//      public static final int FETCHED_QUEUE_SIZE=10; //Should be a constant. 
      }
  
  
