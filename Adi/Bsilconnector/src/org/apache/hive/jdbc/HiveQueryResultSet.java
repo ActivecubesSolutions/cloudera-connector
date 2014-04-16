@@ -30,6 +30,8 @@ import org.apache.hive.service.cli.thrift.TRow;
 import org.apache.hive.service.cli.thrift.TSessionHandle;
 import org.apache.hive.service.cli.thrift.TTableSchema;
 
+import com.test.HiveJdbcClient;
+
 /**
  * HiveQueryResultSet.
  *
@@ -37,6 +39,8 @@ import org.apache.hive.service.cli.thrift.TTableSchema;
 public class HiveQueryResultSet extends HiveBaseResultSet {
 
     public static final Log LOG = LogFactory.getLog(HiveQueryResultSet.class);
+
+	public static final int executorThreads = HiveJdbcClient.EXECUTOR_CONSUMER_THREADS;
 
     private TCLIService.Iface client;
     private TOperationHandle stmtHandle;
@@ -241,8 +245,8 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
      */
     public boolean next() throws SQLException {
         // List<Object> finalrow = new ArrayList<Object>();
-        fetchedDeque = new LinkedBlockingDeque<List<TRow>>(10);
-        fetchedRseultQueque = new LinkedBlockingDeque<String>(20);
+        fetchedDeque = new LinkedBlockingDeque<List<TRow>>(HiveJdbcClient.FETCHED_QUEUE_SIZE);
+        fetchedResultQueue = new LinkedBlockingDeque<String>(HiveJdbcClient.FETCHED_QUEUE_SIZE*2);
 
         if (isClosed) {
             throw new SQLException("Resultset is closed");
@@ -314,7 +318,7 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
             }
         }.start();
 
-        final ExecutorService executorService = Executors.newFixedThreadPool(100);
+        final ExecutorService executorService = Executors.newFixedThreadPool(executorThreads);
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -323,7 +327,7 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
         }
 
         while (fetchedDeque.size() > 0) {
-
+        	System.out.println("Current fetchedDeque size is :"+fetchedDeque.size());
             executorService.execute(new Runnable() {
                 public void run() {
                     if (fetchedDeque.remainingCapacity() == 20) {
@@ -428,7 +432,7 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
 
                         finalrow.append("]");
                         try {
-                            fetchedRseultQueque.put(finalrow.toString());
+                            fetchedResultQueue.put(finalrow.toString());
 
                             // System.out.println("added into Queue "+fetchedRseultQueque.size());
                         } catch (InterruptedException e) {
@@ -449,7 +453,7 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
 
         }
         try {
-            fetchedRseultQueque.put("false");
+            fetchedResultQueue.put("false");
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

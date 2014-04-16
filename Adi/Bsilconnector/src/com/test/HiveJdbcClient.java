@@ -8,7 +8,11 @@ import java.util.Date;
 
  
 public class HiveJdbcClient {
-     private static String driverName = "org.apache.hive.jdbc.HiveDriver";
+     public static final int EXECUTOR_CONSUMER_THREADS = 10;
+     public static final int RECORDS_FETCH_LIMIT=100;
+     public static final int RECORDS_FETCH_SIZE=10; //this has to be a constant,as the total number of records is not known. 
+     public static final int FETCHED_QUEUE_SIZE=10;
+	private static String driverName = "org.apache.hive.jdbc.HiveDriver";
  
   /**
  * @param args
@@ -31,7 +35,7 @@ public class HiveJdbcClient {
        
         Statement stmt = con.createStatement();
            // select * query
-        String sql = "select * from priceandinventory limit 1000" ;
+        String sql = "select * from priceandinventory limit "+RECORDS_FETCH_LIMIT ;
         System.out.println("Running: " + sql);
        final ResultSet res = stmt.executeQuery(sql);
       System.out.println( res.getNString(""));
@@ -43,7 +47,7 @@ public class HiveJdbcClient {
        
     public void run()
     {try {
-        res.setFetchSize(10);
+        res.setFetchSize(RECORDS_FETCH_SIZE);
         res.next();
     } catch (SQLException e) {
         // TODO Auto-generated catch block

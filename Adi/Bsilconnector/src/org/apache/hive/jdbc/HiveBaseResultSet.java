@@ -71,7 +71,7 @@ public abstract class HiveBaseResultSet implements ResultSet {
   protected List<String> columnNames;
   protected List<String> columnTypes;
   protected BlockingDeque<List<TRow>> fetchedDeque;
-  protected BlockingDeque<String> fetchedRseultQueque;
+  protected BlockingDeque<String> fetchedResultQueue;
 
   private TableSchema schema;
   int i = 1;
@@ -230,7 +230,7 @@ public abstract class HiveBaseResultSet implements ResultSet {
    
       String finalJson = "false";
     try {
-        finalJson = fetchedRseultQueque.take();
+        finalJson = fetchedResultQueue.take();
     } catch (InterruptedException e) {
         // TODO Auto-generated catch block
         e.printStackTrace();

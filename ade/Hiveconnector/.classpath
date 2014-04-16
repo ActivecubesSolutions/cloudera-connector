@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/commons-logging-1.0.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/commons-logging-api-1.0.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/hadoop-common-2.0.0-cdh4.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/hive-cli-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/hive-common-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/hive-exec-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/hive-metastore-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/hive-pdk-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/hive-serde-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/hive-service-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/hive-shims-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/libfb303-0.9.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/libthrift-0.9.0-cdh4-1.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/log4j-1.2.16.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/slf4j-api-1.6.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/jars/jars/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/adeppa.thondur/Downloads/bsilhivedriver.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/bsilhivedriver.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/commons-logging-api-1.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/hadoop-common-2.0.0-cdh4.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/hive-cli-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/hive-common-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/hive-exec-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/hive-metastore-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/hive-pdk-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/hive-serde-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/hive-service-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/hive-shims-0.10.0-cdh4.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/libfb303-0.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/libthrift-0.9.0-cdh4-1.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/slf4j-api-1.6.4.jar"/>
+	<classpathentry kind="lib" path="C:/workspace/cloudera-connector/ade/jars/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
