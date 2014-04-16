@@ -8,7 +8,7 @@ import java.util.Date;
 
  
 public class HiveJdbcClient {
-     public static final int EXECUTOR_CONSUMER_THREADS = 10;
+     public static final int EXECUTOR_CONSUMER_THREADS = 1000;
      public static final int RECORDS_FETCH_LIMIT=1000;
      public static final int RECORDS_FETCH_BATCH_SIZE=10; //this has to be a constant,as the total number of records is not known. 
      public static final int FETCHED_QUEUE_SIZE=100; //Should be a constant. 

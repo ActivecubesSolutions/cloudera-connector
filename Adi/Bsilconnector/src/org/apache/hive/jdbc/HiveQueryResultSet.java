@@ -6,10 +6,12 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.concurrent.BlockingDeque;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingDeque;
@@ -17,6 +19,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.hadoop.hive.ql.metadata.Hive;
 import org.apache.hive.service.cli.TableSchema;
 import org.apache.hive.service.cli.thrift.TCLIService;
 import org.apache.hive.service.cli.thrift.TColumnDesc;
@@ -245,9 +248,9 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
      */
     public boolean next() throws SQLException {
         // List<Object> finalrow = new ArrayList<Object>();
-        fetchedDeque = new LinkedBlockingDeque<List<TRow>>(HiveJdbcClient.FETCHED_QUEUE_SIZE);
-        fetchedResultQueue = new LinkedBlockingDeque<String>(HiveJdbcClient.FETCHED_QUEUE_SIZE*2);
-
+        fetchedDeque = new ConcurrentLinkedQueue<List<TRow>>();
+        fetchedResultQueue = new ConcurrentLinkedQueue<String>();
+        
         if (isClosed) {
             throw new SQLException("Resultset is closed");
         }
@@ -258,6 +261,7 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
         new Thread() {
 
             public void run() {
+            	long lStartTime = new Date().getTime();
                 while (completed) {
                     try {
                         TFetchOrientation orientation = TFetchOrientation.FETCH_NEXT;
@@ -291,7 +295,7 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
                             completed = false;
 
                         } else {
-                            fetchedDeque.put(fetchedRows);
+                            fetchedDeque.add(fetchedRows);
                             noOfRowsInQueue++;
                         }
 
@@ -315,6 +319,9 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
                         }
                     }
                 }
+                long lEndTime = new Date().getTime();
+                double difference = lEndTime - lStartTime;
+                System.out.println("Producer thread time taken to collect "+HiveJdbcClient.RECORDS_FETCH_LIMIT+" is "+difference/1000+ " millisecs");
             }
         }.start();
 
@@ -330,7 +337,7 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
         	System.out.println("Current fetchedDeque size is :"+fetchedDeque.size());
             executorService.execute(new Runnable() {
                 public void run() {
-                    if (fetchedDeque.remainingCapacity() == HiveJdbcClient.FETCHED_QUEUE_SIZE*2) {
+                    if (fetchedDeque.isEmpty()) {
                         executorService.shutdown();
                     }
 
@@ -338,8 +345,8 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
                     //System.out.println(Thread.currentThread().getName());
                     StringBuilder finalrow = new StringBuilder(100);
                     try {
-						fetchedRowsItr= fetchedDeque.take().iterator();
-					} catch (InterruptedException e1) {
+						fetchedRowsItr= fetchedDeque.poll().iterator();
+					} catch (Exception e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
@@ -432,10 +439,10 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
 
                         finalrow.append("]");
                         try {
-                            fetchedResultQueue.put(finalrow.toString());
+                            fetchedResultQueue.add(finalrow.toString());
 
                             // System.out.println("added into Queue "+fetchedRseultQueque.size());
-                        } catch (InterruptedException e) {
+                        } catch (Exception e) {
                             // TODO Auto-generated catch block
                             e.printStackTrace();
                         }
@@ -453,8 +460,8 @@ public class HiveQueryResultSet extends HiveBaseResultSet {
 
         }
         try {
-            fetchedResultQueue.put("false");
-        } catch (InterruptedException e) {
+            fetchedResultQueue.add("false");
+        } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }

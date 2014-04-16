@@ -44,6 +44,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.BlockingDeque;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 import org.apache.hive.service.cli.TableSchema;
 import org.apache.hive.service.cli.Type;
@@ -70,8 +71,8 @@ public abstract class HiveBaseResultSet implements ResultSet {
   protected List<String> finallist;
   protected List<String> columnNames;
   protected List<String> columnTypes;
-  protected BlockingDeque<List<TRow>> fetchedDeque;
-  protected BlockingDeque<String> fetchedResultQueue;
+  protected ConcurrentLinkedQueue<List<TRow>> fetchedDeque;
+  protected ConcurrentLinkedQueue<String> fetchedResultQueue;
 
   private TableSchema schema;
   int i = 1;
@@ -230,8 +231,9 @@ public abstract class HiveBaseResultSet implements ResultSet {
    
       String finalJson = "false";
     try {
-        finalJson = fetchedResultQueue.take();
-    } catch (InterruptedException e) {
+        //finalJson = fetchedResultQueue.take();
+        finalJson = fetchedResultQueue.poll();
+    } catch (Exception e) {
         // TODO Auto-generated catch block
         e.printStackTrace();
     }
