@@ -9,9 +9,9 @@ import java.util.Date;
  
 public class HiveJdbcClient {
      public static final int EXECUTOR_CONSUMER_THREADS = 10;
-     public static final int RECORDS_FETCH_LIMIT=1000;
+     public static final int RECORDS_FETCH_LIMIT=10;
      public static final int RECORDS_FETCH_BATCH_SIZE=10; //this has to be a constant,as the total number of records is not known. 
-     public static final int FETCHED_QUEUE_SIZE=100; //Should be a constant. 
+     public static final int FETCHED_QUEUE_SIZE=1; //Should be a constant. 
 	private static String driverName = "org.apache.hive.jdbc.HiveDriver";
  
   /**
@@ -19,6 +19,7 @@ public class HiveJdbcClient {
  * @throws SQLException
    */
   public static void main(String[] args) throws SQLException {
+	  int i=0;
       try {
           Class.forName(driverName);
         } catch (ClassNotFoundException e) {
@@ -39,25 +40,13 @@ public class HiveJdbcClient {
         System.out.println("Running: " + sql);
        final ResultSet res = stmt.executeQuery(sql);
       System.out.println( res.getNString(""));
+      res.setFetchSize(RECORDS_FETCH_BATCH_SIZE);
       
       long lStartTime = new Date().getTime();
-     
-    new Thread()
-    {
-       
-    public void run()
-    {try {
-        res.setFetchSize(RECORDS_FETCH_BATCH_SIZE);
-        res.next();
-    } catch (SQLException e) {
-        // TODO Auto-generated catch block
-        e.printStackTrace();
-    }
-   
-    }
-    }.start();
-   
-   
+      if(i==0){
+      res.next();
+      }
+   i++;
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -70,7 +59,7 @@ int times = 0;
     {
     String output = res.getCursorName();
    
-   // System.out.println("output"+output);
+    System.out.println("output"+output);
     //times++;
     if(output.equalsIgnoreCase("false"))
     {
